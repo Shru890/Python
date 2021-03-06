@@ -50,3 +50,18 @@ for i in range(N) :
     else:
         print("error")
 print(sum(s))
+
+#to give all possible permutations of a word in the give set group
+from itertools import permutations
+l=list(map(str,input().split(" ")))
+s=list(permutations(l[0],int(l[1])))
+s.sort()
+[print("".join(i)) for i in s]
+
+#all possible combinations of a string
+from itertools import combinations
+s = input().split()
+string, number = sorted(s[0]), int(s[1])
+for i in range(1, number + 1):
+    print(*list(map(''.join,combinations(string, i))), sep='\n')
+    
