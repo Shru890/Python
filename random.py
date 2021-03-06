@@ -33,3 +33,20 @@ if __name__ == '__main__':
 if __name__ == '__main__':
     s = input()
     minion_game(s)
+
+#to perform set operations and give the sum of ramaining values in the set
+n = int(input())
+s = set(map(int, input().split()))
+N=int(input())
+
+for i in range(N) :
+    choice=input().split()
+    if choice[0]=="pop" :
+        s.pop()
+    elif choice[0]=="remove" :
+        s.remove(int(choice[1]))
+    elif choice[0]=="discard" :
+        s.discard(int(choice[1]))
+    else:
+        print("error")
+print(sum(s))
