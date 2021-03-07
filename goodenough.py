@@ -26,3 +26,15 @@ if any(ans)==True:
     print("yes")
 else:
     print("no")
+
+"""
+OR
+"""
+
+n,h,x=map(int,input().split(" "))
+l = list(map(int,input().split(" ")))[:n] 
+if x +max(l)==h:
+    print ("yes")
+else:
+    print("no")
+    
