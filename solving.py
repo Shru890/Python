@@ -41,3 +41,18 @@ if __name__ == '__main__':
             print(L)
         else:
             print("wrong input")
+
+# Rearrange the words according to preferences
+l=list(map(str,input(" ")))
+k=[i for i in l if i.isdigit()==True]
+v=[i for i in l if i.isalpha()==True or i==" "]
+s=("".join(v))
+lv=list(s.split(" "))
+dic = {k[i]: lv[i] for i in range(len(k))} 
+a=sorted(list(dic.keys()))
+for i in range(len(a)):
+    print(dic[a[i]],end=" ")
+'''
+input: i1s Th0is Te2st a3
+output: This is a Test
+'''
