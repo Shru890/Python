@@ -52,6 +52,14 @@ dic = {k[i]: lv[i] for i in range(len(k))}
 a=sorted(list(dic.keys()))
 for i in range(len(a)):
     print(dic[a[i]],end=" ")
+#or
+s=input().split()
+d=""
+for i in range(len(s)):
+    for j in range(len(s)):
+        if str(i) in s[j]:
+            d+=s[j].replace(str(i),"")+" "
+print(d)
 '''
 input: i1s Th0is Te2st a3
 output: This is a Test
