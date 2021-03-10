@@ -64,3 +64,30 @@ print(d)
 input: i1s Th0is Te2st a3
 output: This is a Test
 '''
+
+# write a fuction to add element till nth term
+s= input()
+def add_it_up(s):
+    if s.isdigit():
+        s=int(s)
+        sele=0
+        ele=[i for i in range(s+1)]
+        for i in ele:
+            sele+=i
+        return (sele)
+    else:
+        return 0
+
+print(add_it_up(s))
+
+#to rotate a list
+n=int(input())
+arr=list(map(int,input().split(" ")))
+d=int(input())
+def rot(arr,n,d):
+    c=arr[d:]+arr[0:d]
+    for i in range(n):
+        arr[i]=c[i]
+rot(arr,n,d)
+print(arr)
+
