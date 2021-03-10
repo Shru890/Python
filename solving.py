@@ -91,3 +91,9 @@ def rot(arr,n,d):
 rot(arr,n,d)
 print(arr)
 
+#get the max numbers
+li=sorted(map(int,input().split(" ")))
+n=int(input())
+li=li[-n:]
+li.reverse()
+print(li)
