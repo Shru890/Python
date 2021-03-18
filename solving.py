@@ -97,3 +97,10 @@ n=int(input())
 li=li[-n:]
 li.reverse()
 print(li)
+
+#itertools-groupby
+from itertools import groupby
+s= input()
+for k, g in groupby(s):
+    l= list(g)
+    print("({}, {})".format(len(l), k), end=" ")
