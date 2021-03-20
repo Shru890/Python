@@ -65,3 +65,14 @@ string, number = sorted(s[0]), int(s[1])
 for i in range(1, number + 1):
     print(*list(map(''.join,combinations(string, i))), sep='\n')
     
+#multiple of 2
+n=int(input())
+for i in range(n):
+    if n/2==2:
+        print ("True")
+        break
+    elif (n/2)>2:
+        n=n/2
+    else: 
+        print("False")
+        break
