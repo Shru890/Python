@@ -76,3 +76,12 @@ for i in range(n):
     else: 
         print("False")
         break
+       #OR
+    
+import math
+n=int(input())
+a= math.log(n,2)
+if 2**round(a)==n:
+    print("True")
+else:
+    print("False")
