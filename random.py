@@ -85,3 +85,19 @@ if 2**round(a)==n:
     print("True")
 else:
     print("False")
+    
+#consecutive ones
+def convert(n):
+    b=bin(n).replace("0b","")
+    b=b.split("0")
+    count=len(b[0])
+    for i in range(len(b)):
+        if len(b[i])>count:
+            count=len(b[i])
+        else:
+            continue
+    return count
+
+if __name__ == '__main__':
+    n=int(input())
+    print(convert(n))
