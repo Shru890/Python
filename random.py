@@ -101,3 +101,32 @@ def convert(n):
 if __name__ == '__main__':
     n=int(input())
     print(convert(n))
+
+#Count Valleys 
+def countingValleys(steps, path):
+    count =0
+    valley = 0
+
+    for step in path:
+        if step == 'U':
+            count = count + 1
+        else:
+            count = count - 1
+        
+        if step == 'U' and count == 0:
+            valley += 1
+    
+    return valley
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    steps = int(input().strip())
+
+    path = input()
+
+    result = countingValleys(steps, path)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
