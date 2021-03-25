@@ -120,4 +120,4 @@ if len(a)==len(b):
     else:
         print("False")
 else:
-    print("Not an anagram")
+    print("Unequal input lengths")
