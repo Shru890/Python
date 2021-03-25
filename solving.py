@@ -104,3 +104,20 @@ s= input()
 for k, g in groupby(s):
     l= list(g)
     print("({}, {})".format(len(l), k), end=" ")
+    
+# to check anagram
+a,b=input().split(',')
+a=sorted(list(a))
+b=sorted(list(b))
+if len(a)==len(b):
+    for i in range(len(a)):
+        if a[i]==b[i]:
+            c=1
+        else:
+            c=0
+    if c==1:
+        print("True")
+    else:
+        print("False")
+else:
+    print("Not an anagram")
