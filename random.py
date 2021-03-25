@@ -130,3 +130,19 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+
+# reverse a string without inbuilt functions
+a="shruti"
+b=""
+for i in a:
+    b=i+b
+print(b)
+
+# if 153=1**3+5**3+3**3 return true
+n=int(input())
+n=str(n)
+m=len(n)
+s=0
+for i in n:
+    s+=int(i)**m
+print('true') if s==int(n) else print("false")
