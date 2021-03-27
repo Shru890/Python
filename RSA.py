@@ -1,7 +1,8 @@
 import random
 import math
 pt=input("Enter text or number to be encrypted:")
-if pt.isalpha():
+plain=pt.replace(" ","")
+if plain.isalpha():
     pta=pt.lower()
     ptn=[ord(i)%97 for i in pta]
 elif pt.isdigit():
@@ -38,9 +39,9 @@ if d!= -1:
 else:
     print("Invalid Key Encryption is not Possible!!!!!!!!")
     
-if pt.isalpha() and pt.islower():
+if plain.isalpha() and plain.islower():
     dt = "".join([chr(97+int(i)) for i in dt])
-elif pt.isalpha and pt.isupper():
+elif plain.isalpha() and plain.isupper():
     dt = "".join([chr(65+int(i)) for i in dt])
 else:
     dt= dt
