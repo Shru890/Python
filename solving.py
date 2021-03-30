@@ -121,3 +121,16 @@ if len(a)==len(b):
         print("False")
 else:
     print("Unequal input lengths")
+    
+#Sub list of sum equals to zero
+li=[]
+l=list(map(int, input().split(" ")))
+for i in range(len(l)-2):
+    for j in range(i+1,len(l)-1):
+        for k in range(j+1,len(l)):
+            if l[i]+l[j]+l[k]==0:
+                dum=[l[i],l[j],l[k]]
+                li.append(dum)
+            else:
+                continue
+print(li)
