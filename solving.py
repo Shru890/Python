@@ -134,3 +134,23 @@ for i in range(len(l)-2):
             else:
                 continue
 print(li)
+
+#min-max sum
+def miniMaxSum(arr):
+    arr=sorted(arr)
+    n=len(arr)
+    print(sum(arr[:n-1]),sum(arr[1:]))
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+    
+#Birthday cake candles
+def birthdayCakeCandles(candles):
+    candles=sorted(candles)
+    count=0
+    tallcandle=max(candles)
+    for i in candles:
+        if i==tallcandle:
+            count+=1
+    return count
