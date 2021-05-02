@@ -154,3 +154,12 @@ def birthdayCakeCandles(candles):
         if i==tallcandle:
             count+=1
     return count
+
+#print all strings of n bits
+n=int(input())
+l=[]
+for i in range(2**n):
+    l.append(bin(i).replace("0b",""))
+    if len(l[i])<n:
+        l[i]="0"*(n-len(l[i]))+l[i]
+print("\n".join(l))
