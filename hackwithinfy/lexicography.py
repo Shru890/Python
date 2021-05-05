@@ -1,4 +1,5 @@
 gift=input()
+k=int(input())
 gift=list(gift)
 gift=set(sorted(gift))
 l=[]
@@ -9,4 +10,8 @@ for i in gift:
         l.append((ord(i)%97)-1)
         l.sort(reverse=True)
 if len(gift)!=1:
-    print(l[0])
+    if len(l)==k:
+        print(l[0])
+    else:
+        s=sum(l[0:k])
+        print(s)
