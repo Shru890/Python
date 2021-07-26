@@ -146,3 +146,18 @@ s=0
 for i in n:
     s+=int(i)**m
 print('true') if s==int(n) else print("false")
+
+#fahrenheit to celsius
+def fahrenheitToCelsius(l):
+    s=l[0]
+    e=l[1]
+    w=l[2]
+    for i in range(s,e+1,w):
+        celsius = int((i-32)* 5/9)
+        print("{} {}".format(i,celsius))
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(list(map(int,input().split(" "))))
+for i in l:    
+    fahrenheitToCelsius(i)
