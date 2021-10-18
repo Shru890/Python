@@ -1,3 +1,24 @@
+#sorting with conditions
+s=input()
+e=""
+o=""
+u=""
+l=""
+for i in s:
+    if i.isdigit():
+        if int(i)%2==0:
+            e=e+i
+        else:
+            o=o+i
+    elif i.isupper():
+        u=u+i
+    else:
+        l=l+i
+u = ''.join(sorted(u))
+l = ''.join(sorted(l))
+
+print(l+u+o+e)
+
 #to count the occurence of items in a list
 li=list(map(int,input("Enter the is list values::").split(" ")))
 n=len(li)
